@@ -7,7 +7,7 @@ metadata:
 spec:
   clusterName: gdp-test-cluster
   git:
-    syncRepo: git@github.com:guilledipa/ibm-maximo-gke.git
-    syncBranch: 1.0.0
+    policyDir: k8s
     secretType: none
-    policyDir: "k8s"
+    syncBranch: master
+    syncRepo: git@github.com:guilledipa/ibm-maximo-gke.git
