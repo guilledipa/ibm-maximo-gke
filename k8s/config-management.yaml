@@ -1,0 +1,13 @@
+# config-management.yaml
+apiVersion: addons.sigs.k8s.io/v1alpha1
+kind: ConfigManagement
+metadata:
+  name: config-management
+  namespace: config-management-system
+spec:
+  clusterName: gdp-test-cluster
+  git:
+    syncRepo: git@github.com:guilledipa/ibm-maximo-gke.git
+    syncBranch: 1.0.0
+    secretType: none
+    policyDir: "k8s"
