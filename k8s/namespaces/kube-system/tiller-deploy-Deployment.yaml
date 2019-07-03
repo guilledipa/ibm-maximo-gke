@@ -12,7 +12,6 @@ metadata:
     app: helm
     name: tiller
   name: tiller-deploy
-  namespace: kube-system
   resourceVersion: "224307"
   selfLink: /apis/extensions/v1beta1/namespaces/kube-system/deployments/tiller-deploy
   uid: 51e0d007-9d30-11e9-bee1-42010a800163
