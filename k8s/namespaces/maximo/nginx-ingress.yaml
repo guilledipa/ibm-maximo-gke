@@ -11,7 +11,7 @@ metadata:
   namespace: maximo
 spec:
   rules:
-  - host: "maximo.example.com"
+  - host: "gdp-maximo-poc.example.com"
     http:
       paths:
       - backend:
