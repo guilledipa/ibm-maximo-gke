@@ -17,7 +17,7 @@ spec:
   # If the domain home is in the image
   domainHomeInImage: true
   # The WebLogic Server Docker image that the Operator uses to start the domain
-  image: "gcr.io/propro-maximo-poc/maximo-app:20190600"
+  image: "container-registry.oracle.com/middleware/weblogic:12.2.1.3"
   # imagePullPolicy defaults to "Always" if image version is :latest
   imagePullPolicy: "IfNotPresent"
   # Identify which Secret contains the credentials for pulling an image
@@ -72,6 +72,6 @@ spec:
   - clusterName: cluster-1
     serverStartState: "RUNNING"
     restartVersion: "v2"
-    replicas: 1
+    replicas: 2
   # The number of managed servers to start for unlisted clusters
   # replicas: 1
