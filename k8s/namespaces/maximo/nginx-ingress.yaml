@@ -4,7 +4,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: "cookie"
-    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-name: "ingress-route"
     nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
     nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
   name: nginx-ingress
@@ -18,3 +18,7 @@ spec:
           serviceName: maximo-admin-server
           servicePort: 7001
         path: "/console"
+      - backend:
+          serviceName: maximo-cluster-cluster-1
+          servicePort: 8001
+        path: "/sample"
