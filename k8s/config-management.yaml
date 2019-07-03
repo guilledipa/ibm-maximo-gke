@@ -10,4 +10,4 @@ spec:
     policyDir: k8s
     secretType: none
     syncBranch: master
-    syncRepo: git@github.com:guilledipa/ibm-maximo-gke.git
+    syncRepo: https://github.com/guilledipa/ibm-maximo-gke.git
