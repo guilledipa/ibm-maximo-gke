@@ -11,8 +11,7 @@ metadata:
   namespace: maximo
 spec:
   rules:
-  - host: "maximo.example.com"
-    http:
+  - http:
       paths:
       - backend:
           serviceName: maximo-admin-server
