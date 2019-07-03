@@ -3,7 +3,7 @@
 #
 # This is an example of how to define a Domain resource.
 #
-apiVersion: "weblogic.oracle/v3"
+apiVersion: "weblogic.oracle/v2"
 kind: Domain
 metadata:
   name: maximo
