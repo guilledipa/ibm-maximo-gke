@@ -1,0 +1,14 @@
+# Default values for anthos.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+git:
+  policyDir: "."
+  secretType: none
+  syncBranch: master
+  syncRepo: ""
+  syncWait: 15
+  syncRev: HEAD
+
+cluster:
+  name: ""
