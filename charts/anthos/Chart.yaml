@@ -2,7 +2,7 @@ apiVersion: v1
 name: anthos
 version: 1.0.0
 description: A Helm chart for Anthos Config Management
-type: library
+type: application
 sources:
   - https://github.com/guilledipa/ibm-maximo-gke/config-management
 icon: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
