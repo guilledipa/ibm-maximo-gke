@@ -1,4 +1,0 @@
-Thank you for installing {{ .Chart.Name }}.
-
-This installs Anthos config management system as per
-https://cloud.google.com/anthos-config-management/docs/how-to/installing
