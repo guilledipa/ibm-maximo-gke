@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-management-operator
+  namespace: kube-system
+  labels:
+    k8s-app: config-management-operator
+spec:
+  selector:
+    matchLabels:
+      k8s-app: config-management-operator
+      component: config-management-operator
+  template:
+    metadata:
+      labels:
+        k8s-app: config-management-operator
+        component: config-management-operator
+    spec:
+      containers:
+      - command:
+        - /manager
+        - --private-registry=
+        name: manager
+        image: gcr.io/config-management-release/config-management-operator:v1.0.0-rc.12
+        resources:
+          requests:
+            cpu: 100m
+            memory: 20Mi
+      serviceAccount: config-management-operator

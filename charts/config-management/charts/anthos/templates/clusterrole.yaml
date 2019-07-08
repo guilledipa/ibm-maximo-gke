@@ -1,0 +1,14 @@
+# The Nomos system creates RBAC rules, so it requires
+# full cluster-admin access. Thus, the operator needs
+# to be able to grant tha permission to the installed
+# Nomos components.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    k8s-app: config-management-operator
+  name: config-management-operator
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
