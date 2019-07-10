@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+ name: wls-admin-server
+spec:
+ type: LoadBalancer
+ selector:
+   weblogic.serverName: admin-server
+ ports:
+ - port: 7001
+   targetPort: 7001

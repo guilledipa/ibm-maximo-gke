@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  password: d2VsY29tZTE=
+  username: d2VibG9naWM=
+kind: Secret
+type: Opaque
+metadata:
+  name: maximo-weblogic-credentials
+  labels:
+    weblogic.domainName: maximo
+    weblogic.domainUID: maximo

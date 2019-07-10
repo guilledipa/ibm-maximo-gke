@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: maximo-db
+spec:
+  selector:
+    matchLabels:
+      app: maximo-db # has to match .spec.template.metadata.labels
+  serviceName: "maximo-db-srv"
+  replicas: 1 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: maximo-db # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      securityContext:
+        fsGroup: 2000
+      containers:
+      - name: maximo-db
+        image: gcr.io/propro-maximo-poc/oracle-db:12.2.0.1.1
+        securityContext:
+          runAsGroup: 0
+        ports:
+        - containerPort: 1521
+          name: db
+        volumeMounts:
+        - name: maximo-orapdb-datafiles
+          mountPath: /usr/share/maximo-pdb/files
+  volumeClaimTemplates:
+  - metadata:
+      name: maximo-orapdb-datafiles
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 50Gi
